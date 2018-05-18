@@ -163,7 +163,7 @@ rm -f /mnt/.profile; ln -sn /etc/profile /mnt/.profile
 cd /mnt/etc
 for f in "DIR_COLORS" "inputrc" "profile" "bashrc" "make.conf"
 do
-	${FETCH} http://mirror.corout.in/freebsd/staff/${f}
+	${FETCH} https://raw.githubusercontent.com/c2nc/freebsd_install/master/${f}
 done
 
 echo ""
