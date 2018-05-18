@@ -1,0 +1,12 @@
+set constantshow
+set historylog
+set locking
+set nowrap
+set quickblank
+set suspend
+set tabsize 4
+set titlecolor brightwhite,blue
+set statuscolor brightwhite,blue
+set keycolor green
+set functioncolor white
+include /usr/local/share/nano/*.nanorc
