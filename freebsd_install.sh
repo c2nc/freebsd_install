@@ -151,9 +151,10 @@ swpath=$(glabel status | grep "${disk_name}p2" | grep -v swap | awk '{print $1}'
 echo ""
 echo "# set the /etc/fstab..."
 cat << EOF > /mnt/etc/fstab
-# Device                                        Mountpoint   FStype   Options   Dump   Pass#
-proc                                            /proc        procfs   rw        0       0
-/dev/${swpath} none         swap     sw        0       0
+# Device                Mountpoint   FStype   Options		Dump   Pass#
+proc			/proc        procfs   rw		0       0
+tmpfs			/tmp         tmpfs    rw,mode=1777	0       0
+/dev/gpt/swap0		none	     swap     sw		0       0
 EOF
 
 echo '#!/bin/sh' > /mnt/root/.profile
