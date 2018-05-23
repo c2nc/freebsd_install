@@ -183,8 +183,8 @@ echo "*** nupdating packages..."; sleep 2
 pkg update
 echo ""
 echo "*** installing some staff..."; sleep 2
-pkg install -y portmaster
-portmaster -ygG editors/nano shells/bash misc/mc security/sudo
+pkg install -y portmaster nano bash mc sudo htop python3
+#portmaster -ygG editors/nano shells/bash misc/mc security/sudo
 echo ""
 echo "*** setuping root password..."; sleep 1
 passwd
